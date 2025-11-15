@@ -3,698 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PizzaHub - Premium Pizza Delivery</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="./dist/output.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #0D1117;
-            color: #fff;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .btn-primary {
-            background: linear-gradient(45deg, #00E676, #00B8D4);
-            transition: all 0.3s ease;
-        }
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px -5px rgba(0, 230, 118, 0.3);
-        }
-        .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: #00E676;
-        }
-    </style>
+    <title>PizzaHub - Delicious Pizzas Delivered</title>
+    <link href="./output.css" rel="stylesheet">
 </head>
-<body class="min-h-screen">
+<body class="bg-gray-900 text-white min-h-screen">
     <!-- Navigation -->
-    <nav class="glass-card fixed w-full z-50">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold text-white">Pizza<span class="text-[#00E676]">Hub</span></div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-white hover:text-[#00E676] transition">Home</a>
-                    <a href="#features" class="text-white hover:text-[#00E676] transition">Features</a>
-                    <a href="#builder" class="text-white hover:text-[#00E676] transition">Build Your Pizza</a>
-                    <a href="#tracking" class="text-white hover:text-[#00E676] transition">Track Order</a>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <button id="loginBtn" class="btn-primary text-white px-6 py-2 rounded-full font-medium">Login</button>
-                    <button class="md:hidden text-white" id="mobileMenuBtn">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
+    <nav class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+            <div class="text-2xl font-bold text-primary">Pizza<span class="text-white">Hub</span></div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="hover:text-primary transition">Home</a>
+                <a href="#menu" class="hover:text-primary transition">Menu</a>
+                <a href="#about" class="hover:text-primary transition">About</a>
+                <a href="#contact" class="hover:text-primary transition">Contact</a>
             </div>
+            <button class="btn-primary">Order Now</button>
         </div>
     </nav>
-    
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="md:hidden hidden fixed inset-0 bg-[#0D1117] z-40 pt-20 px-6">
-        <div class="flex flex-col space-y-4 py-4">
-            <a href="#home" class="text-white hover:text-[#00E676] text-lg py-2 transition">Home</a>
-            <a href="#features" class="text-white hover:text-[#00E676] text-lg py-2 transition">Features</a>
-            <a href="#builder" class="text-white hover:text-[#00E676] text-lg py-2 transition">Build Your Pizza</a>
-            <a href="#tracking" class="text-white hover:text-[#00E676] text-lg py-2 transition">Track Order</a>
-            <button class="btn-primary text-white px-6 py-2 rounded-full font-medium w-full mt-4">
-                Login
-            </button>
-        </div>
-    </div>
 
     <!-- Hero Section -->
-    <section id="home" class="pt-32 pb-20 px-4">
-        <div class="container mx-auto flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-10 md:mb-0">
-                <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
-                    Craft Your Perfect <span class="text-[#00E676]">Pizza</span> Experience
-                </h1>
-                <p class="text-gray-300 text-lg mb-8 max-w-lg">
-                    Premium ingredients, hand-tossed dough, and your favorite toppings. Delivered hot and fresh to your doorstep.
-                </p>
-                <button class="btn-primary text-white px-8 py-3 rounded-full font-medium text-lg">
-                    Order Now <i class="fas fa-arrow-right ml-2"></i>
-                </button>
-            </div>
-            <div class="md:w-1/2 flex justify-center">
-                <div class="relative w-full max-w-md">
-                    <div class="absolute -top-10 -left-10 w-40 h-40 bg-[#00E676] rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-                    <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-[#FFC400] rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-                    <div class="relative">
-                        <img src="https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395_1280.jpg" 
-                             alt="Delicious Pizza" 
-                             class="rounded-3xl shadow-2xl border-4 border-white/10 w-full h-auto">
-                    </div>
-                </div>
+    <section class="container mx-auto px-6 py-20 md:py-32">
+        <div class="max-w-3xl">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight">Delicious Pizzas <span class="text-primary">Delivered</span> To Your Door</h1>
+            <p class="text-lg text-gray-300 mt-6 mb-8">Order your favorite pizza from the best pizzerias in town. Fast delivery and mouth-watering flavors guaranteed!</p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <button class="btn-primary">Order Now</button>
+                <button class="px-6 py-2 border border-primary text-primary rounded-full hover:bg-primary/10 transition">View Menu</button>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="py-20 px-4 bg-gradient-to-b from-[#0D1117] to-[#0a0e14]">
-        <div class="container mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-16">Why Choose <span class="text-[#00E676]">PizzaHub</span>?</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="feature-card glass-card p-8 rounded-2xl transition-all duration-300 border border-transparent">
-                    <div class="w-16 h-16 bg-[#00E676]/10 rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-laptop-code text-3xl text-[#00E676]"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Modern Tech Stack</h3>
-                    <p class="text-gray-400">Built with React, Node.js, and MongoDB for a seamless user experience.</p>
-                </div>
-
-                <!-- Feature 2 -->
-                <div class="feature-card glass-card p-8 rounded-2xl transition-all duration-300 border border-transparent">
-                    <div class="w-16 h-16 bg-[#FFC400]/10 rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-user-shield text-3xl text-[#FFC400]"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Secure Authentication</h3>
-                    <p class="text-gray-400">Secure user and admin login with email verification and password reset.</p>
-                </div>
-
-                <!-- Feature 3 -->
-                <div class="feature-card glass-card p-8 rounded-2xl transition-all duration-300 border border-transparent">
-                    <div class="w-16 h-16 bg-[#00E676]/10 rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-pizza-slice text-3xl text-[#00E676]"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Custom Pizza Builder</h3>
-                    <p class="text-gray-400">Create your perfect pizza with our intuitive builder tool.</p>
-                </div>
-
-                <!-- Feature 4 -->
-                <div class="feature-card glass-card p-8 rounded-2xl transition-all duration-300 border border-transparent">
-                    <div class="w-16 h-16 bg-[#FFC400]/10 rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-credit-card text-3xl text-[#FFC400]"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Secure Payments</h3>
-                    <p class="text-gray-400">Safe and secure payments with Razorpay integration.</p>
-                </div>
-
-                <!-- Feature 5 -->
-                <div class="feature-card glass-card p-8 rounded-2xl transition-all duration-300 border border-transparent">
-                    <div class="w-16 h-16 bg-[#00E676]/10 rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-boxes text-3xl text-[#00E676]"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Inventory Management</h3>
-                    <p class="text-gray-400">Real-time inventory tracking for admin users.</p>
-                </div>
-
-                <!-- Feature 6 -->
-                <div class="feature-card glass-card p-8 rounded-2xl transition-all duration-300 border border-transparent">
-                    <div class="w-16 h-16 bg-[#FFC400]/10 rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-truck text-3xl text-[#FFC400]"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Live Order Tracking</h3>
-                    <p class="text-gray-400">Track your order in real-time from preparation to delivery.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pizza Builder Section -->
-    <section id="builder" class="py-20 px-4">
-        <div class="container mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-4">Build Your <span class="text-[#00E676]">Dream Pizza</span></h2>
-            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">Customize every layer of your pizza with our easy-to-use builder</p>
-            
-            <div class="max-w-4xl mx-auto glass-card p-8 rounded-2xl">
-                <!-- Progress Steps -->
-                <div class="flex justify-between mb-12 relative">
-                    <div class="absolute top-1/2 left-0 right-0 h-1 bg-gray-700 -z-10"></div>
-                    <div id="progressBar" class="absolute top-1/2 left-0 h-1 bg-[#00E676] -z-5 transition-all duration-500" style="width: 0%"></div>
-                    
-                    <div class="step flex flex-col items-center">
-                        <div class="w-12 h-12 rounded-full bg-[#00E676] flex items-center justify-center text-white font-bold text-xl mb-2">1</div>
-                        <span class="text-sm font-medium">Choose Base</span>
-                    </div>
-                    <div class="step flex flex-col items-center">
-                        <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center text-gray-400 font-bold text-xl mb-2">2</div>
-                        <span class="text-sm text-gray-400">Select Sauce</span>
-                    </div>
-                    <div class="step flex flex-col items-center">
-                        <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center text-gray-400 font-bold text-xl mb-2">3</div>
-                        <span class="text-sm text-gray-400">Add Cheese</span>
-                    </div>
-                    <div class="step flex flex-col items-center">
-                        <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center text-gray-400 font-bold text-xl mb-2">4</div>
-                        <span class="text-sm text-gray-400">Toppings</span>
-                    </div>
-                </div>
-
-                <!-- Pizza Base Selection -->
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-                    <!-- Pizza Base 1 -->
-                    <div class="p-4 rounded-xl border border-gray-700 hover:border-[#00E676] transition-all cursor-pointer">
-                        <div class="w-20 h-20 mx-auto mb-3 bg-gray-800 rounded-full flex items-center justify-center">
-                            <i class="fas fa-bread-slice text-3xl text-[#FFC400]"></i>
-                        </div>
-                        <h4 class="font-medium text-center">Classic Crust</h4>
-                        <p class="text-sm text-gray-400 text-center">Hand-tossed, light & crispy</p>
-                    </div>
-                    
-                    <!-- Pizza Base 2 -->
-                    <div class="p-4 rounded-xl border border-gray-700 hover:border-[#00E676] transition-all cursor-pointer">
-                        <div class="w-20 h-20 mx-auto mb-3 bg-gray-800 rounded-full flex items-center justify-center">
-                            <i class="fas fa-cheese text-3xl text-[#FFC400]"></i>
-                        </div>
-                        <h4 class="font-medium text-center">Cheese Burst</h4>
-                        <p class="text-sm text-gray-400 text-center">Stuffed with mozzarella</p>
-                    </div>
-                    
-                    <!-- Pizza Base 3 -->
-                    <div class="p-4 rounded-xl border border-gray-700 hover:border-[#00E676] transition-all cursor-pointer">
-                        <div class="w-20 h-20 mx-auto mb-3 bg-gray-800 rounded-full flex items-center justify-center">
-                            <i class="fas fa-wheat-alt text-3xl text-[#FFC400]"></i>
-                        </div>
-                        <h4 class="font-medium text-center">Whole Wheat</h4>
-                        <p class="text-sm text-gray-400 text-center">Healthier option</p>
-                    </div>
-                    
-                    <!-- Pizza Base 4 -->
-                    <div class="p-4 rounded-xl border border-gray-700 hover:border-[#00E676] transition-all cursor-pointer">
-                        <div class="w-20 h-20 mx-auto mb-3 bg-gray-800 rounded-full flex items-center justify-center">
-                            <i class="fas fa-pepper-hot text-3xl text-[#FFC400]"></i>
-                        </div>
-                        <h4 class="font-medium text-center">Spicy Thin Crust</h4>
-                        <p class="text-sm text-gray-400 text-center">With a kick of heat</p>
-                    </div>
-                    
-                    <!-- Pizza Base 5 -->
-                    <div class="p-4 rounded-xl border border-gray-700 hover:border-[#00E676] transition-all cursor-pointer">
-                        <div class="w-20 h-20 mx-auto mb-3 bg-gray-800 rounded-full flex items-center justify-center">
-                            <i class="fas fa-leaf text-3xl text-[#00E676]"></i>
-                        </div>
-                        <h4 class="font-medium text-center">Gluten-Free</h4>
-                        <p class="text-sm text-gray-400 text-center">For gluten-sensitive</p>
-                    </div>
-                </div>
-
-                <!-- Navigation Buttons -->
-                <div class="flex justify-between mt-12">
-                    <button id="prevStep" class="px-6 py-2 border border-gray-600 text-gray-300 rounded-full hover:bg-gray-700 transition">
-                        <i class="fas fa-arrow-left mr-2"></i> Back
-                    </button>
-                    <button id="nextStep" class="btn-primary text-white px-8 py-2 rounded-full font-medium">
-                        Next: Choose Sauce <i class="fas fa-arrow-right ml-2"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Admin Dashboard Preview -->
-    <section class="py-20 px-4 bg-gradient-to-b from-[#0a0e14] to-[#0D1117]">
-        <div class="container mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-4">Admin <span class="text-[#00E676]">Dashboard</span></h2>
-            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">Powerful tools to manage your pizza business efficiently</p>
-            
-            <div class="glass-card rounded-2xl p-6">
-                <!-- Stats Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                    <!-- Orders Card -->
-                    <div class="bg-[#1e293b] p-6 rounded-xl">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <p class="text-gray-400">Total Orders</p>
-                                <h3 class="text-3xl font-bold">1,248</h3>
-                                <p class="text-sm text-green-400"><i class="fas fa-arrow-up mr-1"></i> 12% from last month</p>
-                            </div>
-                            <div class="w-14 h-14 bg-[#00E676]/10 rounded-full flex items-center justify-center">
-                                <i class="fas fa-shopping-cart text-2xl text-[#00E676]"></i>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Revenue Card -->
-                    <div class="bg-[#1e293b] p-6 rounded-xl">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <p class="text-gray-400">Total Revenue</p>
-                                <h3 class="text-3xl font-bold">$24,560</h3>
-                                <p class="text-sm text-green-400"><i class="fas fa-arrow-up mr-1"></i> 8% from last month</p>
-                            </div>
-                            <div class="w-14 h-14 bg-[#FFC400]/10 rounded-full flex items-center justify-center">
-                                <i class="fas fa-dollar-sign text-2xl text-[#FFC400]"></i>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Inventory Alerts -->
-                    <div class="bg-[#1e293b] p-6 rounded-xl">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <p class="text-gray-400">Low Stock Items</p>
-                                <h3 class="text-3xl font-bold">5</h3>
-                                <p class="text-sm text-red-400">Needs attention</p>
-                            </div>
-                            <div class="w-14 h-14 bg-red-500/10 rounded-full flex items-center justify-center">
-                                <i class="fas fa-exclamation-triangle text-2xl text-red-500"></i>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Active Users -->
-                    <div class="bg-[#1e293b] p-6 rounded-xl">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <p class="text-gray-400">Active Users</p>
-                                <h3 class="text-3xl font-bold">843</h3>
-                                <p class="text-sm text-green-400">Active today</p>
-                            </div>
-                            <div class="w-14 h-14 bg-blue-500/10 rounded-full flex items-center justify-center">
-                                <i class="fas fa-users text-2xl text-blue-500"></i>
-                            </div>
-                        </div>
+    <!-- Featured Pizzas -->
+    <section id="menu" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Our <span class="text-primary">Popular</span> Pizzas</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Pizza Card 1 -->
+                <div class="feature-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Margherita Pizza" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-bold mb-2">Margherita</h3>
+                    <p class="text-gray-300 mb-4">Classic tomato sauce, mozzarella, and fresh basil</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold">$12.99</span>
+                        <button class="btn-primary text-sm">Add to Cart</button>
                     </div>
                 </div>
                 
-                <!-- Inventory Table -->
-                <div class="overflow-x-auto">
-                    <h3 class="text-xl font-semibold mb-4">Inventory Status</h3>
-                    <table class="w-full">
-                        <thead>
-                            <tr class="text-left text-gray-400 border-b border-gray-700">
-                                <th class="pb-3">Item</th>
-                                <th class="pb-3">Category</th>
-                                <th class="pb-3 text-right">In Stock</th>
-                                <th class="pb-3 text-right">Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="border-b border-gray-800 hover:bg-gray-800/50">
-                                <td class="py-3">Mozzarella Cheese</td>
-                                <td class="py-3">Cheese</td>
-                                <td class="py-3 text-right">12.5 kg</td>
-                                <td class="py-3 text-right"><span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs">In Stock</span></td>
-                            </tr>
-                            <tr class="border-b border-gray-800 hover:bg-gray-800/50">
-                                <td class="py-3">Pepperoni</td>
-                                <td class="py-3">Meat</td>
-                                <td class="py-3 text-right">8.2 kg</td>
-                                <td class="py-3 text-right"><span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-xs">Low Stock</span></td>
-                            </tr>
-                            <tr class="border-b border-gray-800 hover:bg-gray-800/50">
-                                <td class="py-3">Classic Tomato Sauce</td>
-                                <td class="py-3">Sauce</td>
-                                <td class="py-3 text-right">5.0 L</td>
-                                <td class="py-3 text-right"><span class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-xs">Reorder</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <!-- Pizza Card 2 -->
+                <div class="feature-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Pepperoni Pizza" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-bold mb-2">Pepperoni</h3>
+                    <p class="text-gray-300 mb-4">Tomato sauce, mozzarella, and spicy pepperoni</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold">$14.99</span>
+                        <button class="btn-primary text-sm">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Pizza Card 3 -->
+                <div class="feature-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Veggie Supreme" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-bold mb-2">Veggie Supreme</h3>
+                    <p class="text-gray-300 mb-4">Tomato sauce, mozzarella, and fresh vegetables</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold">$13.99</span>
+                        <button class="btn-primary text-sm">Add to Cart</button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Order Tracking Section -->
-    <section id="tracking" class="py-20 px-4">
-        <div class="container mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-4">Track Your <span class="text-[#00E676]">Order</span></h2>
-            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">Real-time updates from our kitchen to your doorstep</p>
-            
-            <div class="max-w-3xl mx-auto glass-card p-8 rounded-2xl">
-                <div class="mb-8">
-                    <h3 class="text-xl font-semibold mb-2">Order #PZ-2023-0042</h3>
-                    <p class="text-gray-400">Estimated delivery: 30-40 minutes</p>
+    <!-- Features -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="text-4xl mb-4">🚀</div>
+                    <h3 class="text-xl font-bold mb-2">Fast Delivery</h3>
+                    <p class="text-gray-400">Get your pizza hot and fresh in under 30 minutes or it's free!</p>
                 </div>
-                
-                <!-- Order Status Timeline -->
-                <div class="relative">
-                    <!-- Timeline Line -->
-                    <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-700"></div>
-                    
-                    <!-- Timeline Steps -->
-                    <div class="space-y-8">
-                        <!-- Step 1: Order Received -->
-                        <div class="relative pl-12">
-                            <div class="absolute left-0 w-8 h-8 rounded-full bg-[#00E676] flex items-center justify-center">
-                                <i class="fas fa-check text-white"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold">Order Received</h4>
-                                <p class="text-sm text-gray-400">We've received your order</p>
-                                <p class="text-xs text-gray-500 mt-1">2:15 PM</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Step 2: Preparing -->
-                        <div class="relative pl-12">
-                            <div class="absolute left-0 w-8 h-8 rounded-full bg-[#00E676] flex items-center justify-center">
-                                <i class="fas fa-check text-white"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold">Preparing Your Pizza</h4>
-                                <p class="text-sm text-gray-400">Our chef is working on your order</p>
-                                <p class="text-xs text-gray-500 mt-1">2:20 PM</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Step 3: In Oven -->
-                        <div class="relative pl-12">
-                            <div class="absolute left-0 w-8 h-8 rounded-full bg-[#00E676] flex items-center justify-center">
-                                <i class="fas fa-fire text-white"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold">In the Oven</h4>
-                                <p class="text-sm text-gray-400">Your pizza is being baked to perfection</p>
-                                <p class="text-xs text-gray-500 mt-1">2:30 PM</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Step 4: On the Way -->
-                        <div class="relative pl-12">
-                            <div class="absolute left-0 w-8 h-8 rounded-full border-2 border-[#00E676] flex items-center justify-center bg-[#0D1117]">
-                                <input type="checkbox" id="remember" name="remember" class="h-4 w-4 text-[#00E676] rounded">-full animate-pulse"></div>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold">On the Way</h4>
-                                <p class="text-sm text-gray-400">Your order is out for delivery</p>
-                                <p class="text-xs text-gray-500 mt-1">2:45 PM</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Step 5: Delivered -->
-                        <div class="relative pl-12 opacity-50">
-                            <div class="absolute left-0 w-8 h-8 rounded-full border-2 border-gray-600 flex items-center justify-center">
-                                <i class="fas fa-check text-gray-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-400">Delivered</h4>
-                                <p class="text-sm text-gray-500">Enjoy your meal!</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="text-center p-6">
+                    <div class="text-4xl mb-4">🍕</div>
+                    <h3 class="text-xl font-bold mb-2">100% Fresh</h3>
+                    <p class="text-gray-400">Made with the freshest ingredients daily</p>
                 </div>
-                
-                <!-- Order Summary -->
-                <div class="mt-12 pt-6 border-t border-gray-700">
-                    <h3 class="text-xl font-semibold mb-4">Order Summary</h3>
-                    <div class="space-y-4">
-                        <div class="flex justify-between">
-                            <span class="text-gray-400">1x Margherita Pizza</span>
-                            <span class="font-medium">$12.99</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-gray-400">1x Pepperoni Pizza</span>
-                            <span class="font-medium">$14.99</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-gray-400">Delivery Fee</span>
-                            <span class="font-medium">$2.99</span>
-                        </div>
-                        <div class="flex justify-between pt-4 border-t border-gray-700 mt-2">
-                            <span class="font-semibold">Total</span>
-                            <span class="font-bold text-lg">$30.97</span>
-                        </div>
-                    </div>
+                <div class="text-center p-6">
+                    <div class="text-4xl mb-4">💳</div>
+                    <h3 class="text-xl font-bold mb-2">Easy Payment</h3>
+                    <p class="text-gray-400">Multiple payment options available</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#0a0e14] py-12 px-4">
-        <div class="container mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Pizza<span class="text-[#00E676]">Hub</span></h3>
-                    <p class="text-gray-400 mb-4">Delivering happiness, one pizza at a time.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-[#00E676] transition"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-[#00E676] transition"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-[#00E676] transition"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-[#00E676] transition">Home</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-[#00E676] transition">Menu</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-[#00E676] transition">Build Your Pizza</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-[#00E676] transition">Track Order</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Contact Us</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li class="flex items-start">
-                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-[#00E676]"></i>
-                            <span>123 Pizza Street, Foodie City</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-phone-alt mr-2 text-[#00E676]"></i>
-                            <span>+1 (555) 123-4567</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope mr-2 text-[#00E676]"></i>
-                            <span>hello@pizzahub.com</span>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Newsletter</h4>
-                    <p class="text-gray-400 mb-4">Subscribe for exclusive offers and updates</p>
-                    <div class="flex">
-                        <input type="email" id="email" name="email" required 
-                           class="w-full bg-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-[#00E676]"
-                           placeholder="Enter your email"> w-full">
-                        <button class="bg-[#00E676] text-white px-4 rounded-r-lg hover:bg-[#00c96a] transition">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </div>
+    <footer class="bg-gray-800 py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-2xl font-bold text-primary mb-4 md:mb-0">Pizza<span class="text-white">Hub</span></div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-primary transition">About</a>
+                    <a href="#" class="hover:text-primary transition">Menu</a>
+                    <a href="#" class="hover:text-primary transition">Contact</a>
+                    <a href="#" class="hover:text-primary transition">Privacy Policy</a>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
                 <p>&copy; 2023 PizzaHub. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-[#00E676] rounded-full flex items-center justify-center text-white shadow-lg hover:bg-[#00c96a] transition transform hover:-translate-y-1 hidden">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <script>
-        // Wait for the DOM to be fully loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            // Login Modal Functionality
-            const loginBtn = document.getElementById('loginBtn');
-            const loginModal = document.getElementById('loginModal');
-            const closeModal = document.getElementById('closeModal');
-            const loginForm = document.getElementById('loginForm');
-
-            // Check if elements exist before adding event listeners
-            if (loginBtn && loginModal) {
-                // Show login modal
-                loginBtn.addEventListener('click', () => {
-                    loginModal.classList.remove('hidden');
-                    document.body.style.overflow = 'hidden';
-                });
-            }
-
-            if (closeModal && loginModal) {
-                // Close modal
-                closeModal.addEventListener('click', () => {
-                    loginModal.classList.add('hidden');
-                    document.body.style.overflow = 'auto';
-                });
-            }
-
-            // Close modal when clicking outside
-            if (loginModal) {
-                window.addEventListener('click', (e) => {
-                    if (e.target === loginModal) {
-                        loginModal.classList.add('hidden');
-                        document.body.style.overflow = 'auto';
-                    }
-                });
-            }
-
-            // Form submission
-            if (loginForm) {
-                loginForm.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    const email = document.getElementById('email');
-                    const password = document.getElementById('password');
-                    const remember = document.getElementById('remember');
-                    
-                    if (email && password && remember) {
-                        console.log('Login attempt with:', { 
-                            email: email.value, 
-                            password: password.value, 
-                            remember: remember.checked 
-                        });
-                        
-                        // For demo purposes, just close the modal after a short delay
-                        setTimeout(() => {
-                            if (loginModal) loginModal.classList.add('hidden');
-                            document.body.style.overflow = 'auto';
-                            // Update UI to show user is logged in
-                            if (loginBtn) {
-                                loginBtn.innerHTML = '<i class="fas fa-user mr-2"></i> My Account';
-                                loginBtn.classList.add('logged-in');
-                            }
-                        }, 1000);
-                    }
-                });
-            }
-
-            // Order status update function
-            function updateOrderStatus() {
-                const statuses = document.querySelectorAll('#tracking .relative');
-                if (statuses.length === 0) return;
-                
-                let currentStatus = 0;
-                
-                // Simulate order progress
-                const progressInterval = setInterval(() => {
-                    if (currentStatus < statuses.length) {
-                        const status = statuses[currentStatus];
-                        const icon = status.querySelector('div');
-                        const text = status.querySelector('h4');
-                        
-                        if (icon) {
-                            icon.classList.remove('border-[#00E676]');
-                            icon.classList.add('bg-[#00E676]');
-                            icon.innerHTML = '<i class="fas fa-check text-white"></i>';
-                        }
-                        
-                        if (text) {
-                            text.classList.remove('text-gray-400');
-                            text.classList.add('text-white');
-                        }
-                        
-                        // Update progress bar
-                        const progressBar = document.querySelector('#tracking .bg-\\[\\#00E676\\]');
-                        if (progressBar) {
-                            progressBar.style.width = `${(currentStatus + 1) * 25}%`;
-                        }
-                        
-                        currentStatus++;
-                    } else {
-                        clearInterval(progressInterval);
-                    }
-                }, 3000);
-            }
-
-            // Initialize order status when page loads
-            updateOrderStatus();
-            
-            // Mobile menu toggle
-            const mobileMenuBtn = document.querySelector('.mobile-menu-button');
-            const mobileMenu = document.getElementById('mobileMenu');
-            
-            if (mobileMenuBtn && mobileMenu) {
-                mobileMenuBtn.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
-            }
-            
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                        
-                        // Close mobile menu if open
-                        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                            mobileMenu.classList.add('hidden');
-                        }
-                    }
-                });
-            });
-        });
-        // Back to Top Button
-        const backToTopButton = document.getElementById('backToTop');
-        
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.remove('hidden');
-            } else {
-                backToTopButton.classList.add('hidden');
-            }
-        });
-        
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80, // Adjust for fixed header
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
